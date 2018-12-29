@@ -1,0 +1,96 @@
+.header-wrapper {
+    position: relative;
+    height: 56px;
+    border-bottom: solid 1px #f0f0f0;
+
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100px;
+        height: 56px;
+        // background: url('../../statics/logo.png') no-repeat ;
+        background-size: contain;
+    }
+
+    .nav {
+        width: 960px;
+        height: 56px;
+        // background: red;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        .navItem {
+            line-height: 56px;
+            padding: 0 15px;
+            font-size: 17px;
+            color: #333;
+
+            &.left {
+                float: left;
+            }
+
+            &.right {
+                float: right;
+                color: #969696;
+            }
+
+            &.active {
+                color: #ea6f5a
+            }
+        }
+
+        .navSearch {
+            padding: 0 20px;
+            width: 160px;
+            height: 38px;
+            font-size: 14px;
+            border: solid 1px #eee;
+            border-radius: 40px;
+            background: #eee;
+            outline: none;
+            border: none;
+            margin-top: 9px;
+            box-sizing: border-box;
+            margin-left: 20px;
+            transition: all .2s;
+
+            &.focus {
+                width: 200px;
+            }
+
+            &::placeholder {
+                color: #999;
+            }
+        }
+    }
+
+    .addition {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 56px;
+
+        a {
+            float: right;
+            margin-top: 9px;
+            margin-right: 20px;
+            padding: 0 20px;
+            line-height: 38px;
+            border-radius: 19px;
+            border: solid 1px #ec6149;
+            text-decoration: none;
+            font-size: 14px;
+
+            &.reg {
+                color: #ec6149;
+            }
+
+            &.writting {
+                color: #fff;
+                background: #ec6149
+            }
+        }
+    }
+}

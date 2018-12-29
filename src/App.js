@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import Header from './common/header'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        111
-      </div>
+      <Header />
+      // <div className="App">
+      //   111
+      // </div>
     );
   }
 }
