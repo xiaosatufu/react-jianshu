@@ -111,3 +111,16 @@ blockquote:before,
 blockquote:after {
     content: ””;
 }
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+    line-height: 0;
+}
+a {
+    text-decoration: none;
+}
