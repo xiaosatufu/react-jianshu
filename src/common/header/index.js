@@ -1,6 +1,7 @@
 // import React, { Component } from "react";
 import React from "react";
 import { connect } from "react-redux";
+import  {actionCreators} from './store'
 import "./index.scss";
 
 const Header = props => {
@@ -65,16 +66,16 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     handleInputFocus() {
-      const action = {
-        type: "search_focus"
-      };
-      dispatch(action);
+      // const action = {
+      //   type: "search_focus"
+      // };
+      dispatch(actionCreators.searchFocus());
     },
     handleInputBlur() {
-      const action = {
-        type: "search_blur"
-      };
-      dispatch(action);
+      // const action = {
+      //   type: "search_blur"
+      // };
+      dispatch(actionCreators.searchBulr());
     }
   };
 };
