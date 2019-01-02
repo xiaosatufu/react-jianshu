@@ -18,28 +18,50 @@ class Header extends Component {
   }
 
   getListArea() {
-    if (this.props.focused) {
+    const {
+      focused,
+      list,
+      page,
+      totalPage,
+      mouseIn,
+      handleMouseEnter,
+      handleMouseLeave,
+      handleChangePage
+    } = this.props;
+    const newList = list.toJS();
+    const pageList = [];
+
+    if (!newList.length) {
+      return;
+    }
+    for (let i = (page - 1) * 10; i < page * 10; i++) {
+      // console.log(i)
+      // console.log(newList[i])
+      pageList.push(
+        <li key={newList[i]}>
+          <a href="#">{newList[i]}</a>
+        </li>
+      );
+    }
+
+    // console.log(pageList)
+    if (focused || mouseIn) {
       return (
-        <div className="search-info">
+        <div
+          className="search-info"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <div className="title">热门搜索</div>
-          <a href="#" className="change">
+          <a
+            href="javascript:;"
+            className="change"
+            onClick={() => handleChangePage(page, totalPage)}
+          >
             换一批
           </a>
           <div className="clearfix" />
-          <ul className="clearfix">
-          {
-            this.props.list.map((item)=>{
-              return (
-                <li key={item}>
-                  <a href="#">{item}</a>
-                </li>
-              )
-            })
-          }
-            <li>
-              <a href="#">区块链</a>
-            </li>
-          </ul>
+          <ul className="clearfix">{pageList}</ul>
         </div>
       );
     } else {
@@ -48,6 +70,7 @@ class Header extends Component {
   }
 
   render() {
+    const { focused, handleInputFocus, handleInputBlur, list } = this.props;
     return (
       <div className="header-wrapper">
         <a href="/" className="logo" />
@@ -58,10 +81,10 @@ class Header extends Component {
           <div className="navItem right">Aa</div>
           <div className="search-wrapper">
             <input
-              onFocus={this.props.handleInputFocus}
-              onBlur={this.props.handleInputBlur}
+              onFocus={() => handleInputFocus(list)}
+              onBlur={handleInputBlur}
               type="text"
-              className={`navSearch ${this.props.focused ? "focus" : ""}`}
+              className={`navSearch ${focused ? "focus" : ""}`}
               placeholder="搜索"
             />
             {this.getListArea()}
@@ -96,16 +119,23 @@ const mapStateToProps = state => {
     // focused: state.header.get('focused')
     // focused: state.get('header').get('focused')
     focused: state.getIn(["header", "focused"]),
-    list:state.getIn(["header",'list'])
+    list: state.getIn(["header", "list"]),
+    page: state.getIn(["header", "page"]),
+    totalPage: state.getIn(["header", "totalPage"]),
+    mouseIn: state.getIn(["header", "mouseIn"])
   };
 };
 const mapDispatchToProps = dispatch => {
   return {
-    handleInputFocus() {
+    handleInputFocus(list) {
+      // console.log(list);
       // const action = {
       //   type: "search_focus"
       // };
-      dispatch(actionCreators.getList());
+      // if (list.size === 0) {
+      //   dispatch(actionCreators.getList());
+      // }
+      list.size === 0 && dispatch(actionCreators.getList());
       dispatch(actionCreators.searchFocus());
     },
     handleInputBlur() {
@@ -113,6 +143,20 @@ const mapDispatchToProps = dispatch => {
       //   type: "search_blur"
       // };
       dispatch(actionCreators.searchBulr());
+    },
+    handleMouseEnter() {
+      dispatch(actionCreators.mouseEnter());
+    },
+    handleMouseLeave() {
+      dispatch(actionCreators.mouseLeave());
+    },
+    handleChangePage(page, totalPage) {
+      console.log(page, totalPage);
+      if (page < totalPage) {
+        dispatch(actionCreators.changePage(page + 1));
+      } else {
+        dispatch(actionCreators.changePage(1));
+      }
     }
   };
 };
