@@ -1,0 +1,94 @@
+{
+    "success": true,
+    "data": {
+        "topicList": [{
+            "id": 1,
+            "title": "社会热点",
+            "imgUrl": "//upload.jianshu.io/collections/images/47/%E9%A6%96%E9%A1%B5%E6%8A%95%E7%A8%BF.png?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"
+        }, {
+            "id": 2,
+            "title": "热点",
+            "imgUrl": "//upload.jianshu.io/collections/images/47/%E9%A6%96%E9%A1%B5%E6%8A%95%E7%A8%BF.png?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144/format/webp"
+        }],
+        "articleList": [{
+            "id": 1,
+            "title": "工作效率的2个建议和10个工具",
+            "desc": "你看你的桌子，乱的跟猪窝一样，你能专心致志的干活嘛？你看看你的电脑桌面，怎么全都是文件，",
+            "imageUrl": "//upload.jianshu.io/admin_banners/web_images/4590/7f1edd154f90446a038d6ecd10bebf6e8929fbf5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540",
+            "nickName": "1"
+        }, {
+            "id": 2,
+            "title": "工作效率的2个建议和10个工具",
+            "desc": "你看你的桌子，乱的跟猪窝一样，你能专心致志的干活嘛？你看看你的电脑桌面，怎么全都是文件，",
+            "imageUrl": "//upload.jianshu.io/admin_banners/web_images/4590/7f1edd154f90446a038d6ecd10bebf6e8929fbf5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540",
+            "nickName": "3"
+        }, {
+            "id": 3,
+            "title": "工作效率的2个建议和10个工具",
+            "desc": "你看你的桌子，乱的跟猪窝一样，你能专心致志的干活嘛？你看看你的电脑桌面，怎么全都是文件，",
+            "imageUrl": "//upload.jianshu.io/admin_banners/web_images/4590/7f1edd154f90446a038d6ecd10bebf6e8929fbf5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540",
+            "nickName": "6"
+        }, {
+            "id": 4,
+            "title": "工作效率的2个建议和10个工具",
+            "desc": "你看你的桌子，乱的跟猪窝一样，你能专心致志的干活嘛？你看看你的电脑桌面，怎么全都是文件，",
+            "imageUrl": "//upload.jianshu.io/admin_banners/web_images/4590/7f1edd154f90446a038d6ecd10bebf6e8929fbf5.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540",
+            "nickName": "7"
+        }],
+        "recommentList": [{
+            "id": 1,
+            "imageUrl": "http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
+        }, {
+            "id": 2,
+            "imageUrl": "http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
+        }, {
+            "id": 3,
+            "imageUrl": "http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
+        }, {
+            "id": 4,
+            "imageUrl": "http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
+        }],
+        "writerList": [{
+            "id": 12665193,
+            "slug": "757b5f9f910b",
+            "nickname": "宇文歡",
+            "avatar_source": "http://upload.jianshu.io/users/upload_avatars/12665193/828a449f-efbb-4540-b0af-f6c314810515.jpg",
+            "total_likes_count": 2100,
+            "total_wordage": 256005,
+            "is_following_user": false
+        }, {
+            "id": 6305091,
+            "slug": "4ce7aca123a3",
+            "nickname": "只有一半影子的人",
+            "avatar_source": "http://upload.jianshu.io/users/upload_avatars/6305091/dc5b863a-26fc-47df-af32-18177f6cc9ff.jpg",
+            "total_likes_count": 865,
+            "total_wordage": 252218,
+            "is_following_user": false
+        }, {
+            "id": 8972166,
+            "slug": "b91cc2d507d0",
+            "nickname": "冰千里",
+            "avatar_source": "http://upload.jianshu.io/users/upload_avatars/8972166/027bf05a-67fa-459e-b61c-c73ce267367c.jpg",
+            "total_likes_count": 7389,
+            "total_wordage": 468867,
+            "is_following_user": false
+        }, {
+            "id": 22609,
+            "slug": "giJ1N4",
+            "nickname": "途可小姐",
+            "avatar_source": "http://upload.jianshu.io/users/upload_avatars/22609/cd56e2a2-4245-45ea-892e-23c4eb8274bf.jpg",
+            "total_likes_count": 1261,
+            "total_wordage": 94444,
+            "is_following_user": false
+        }, {
+            "id": 3343569,
+            "slug": "b3b2c03354f3",
+            "nickname": "吴晓布",
+            "avatar_source": "http://upload.jianshu.io/users/upload_avatars/3343569/6940ee65-036f-4b7a-9935-5915d9b67d14.jpg",
+            "total_likes_count": 17999,
+            "total_wordage": 655105,
+            "is_following_user": false
+        }]
+    }
+
+}
