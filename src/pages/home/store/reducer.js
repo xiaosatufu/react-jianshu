@@ -19,5 +19,9 @@ export default (state = defaultState, action) => {
             writerList: fromJS(action.writerList)
         })
     }
+    
+    if (action.type === constants.ADD_ARTICLE_LIST) {
+        return state.set('articleList',state.get('articleList').concat(action.list))
+    }
     return state
 }
